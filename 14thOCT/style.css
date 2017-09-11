@@ -116,3 +116,9 @@ iframe {
   height: 500px;
   border: 1px solid #DEDEDE;
 }
+
+IMG.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
