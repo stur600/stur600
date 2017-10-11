@@ -1,7 +1,7 @@
 {"nodes":[
-{"name":"GPE Top", "color":"#006d2c"},
-{"name":"GPE Middle", "color":"#2ca25f"},
-{"name":"GPE Bottom", "color":"#66c2a4"},
+{"name":"1GPE Top", "color":"#006d2c"},
+{"name":"2GPE Middle", "color":"#2ca25f"},
+{"name":"3GPE Bottom", "color":"#66c2a4"},
 {"name":"Physics120 Top", "color":"#08519c"},
 {"name":"Physics120 Middle", "color":"#3182bd"},
 {"name":"Physics120 Bottom", "color":"#6baed6"},
