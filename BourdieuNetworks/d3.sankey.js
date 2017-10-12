@@ -157,7 +157,7 @@ d3.sankey = function() {
   function computeNodeDepths(iterations) {
     var nodesByBreadth = d3.nest()
         .key(function(d) { return d.x; })
-        .sortKeys(d3.descending)
+        .sortKeys(d3.ascending)
         .entries(nodes)
         .map(function(d) { return d.values; });
 
