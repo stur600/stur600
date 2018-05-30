@@ -1,0 +1,244 @@
+
+<!doctype html>
+<html>
+<head>
+  <title>UoA Physics Transverse Movements by Gender</title>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.19.1/vis.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.19.1/vis.min.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  <style type="text/css">
+    #mynetwork {
+      width: 1000px;
+      height: 1000px;
+      border: 1px solid lightgray;
+	  background-color: white;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  UoA Physics Transverse Movements by Gender
+</p>
+
+<div id="mynetwork"></div>
+
+
+<script type="text/javascript">
+  // create an array with nodes
+  var nodes = new vis.DataSet([{'classsize': 60235,
+   'color': 'rgb(31,120,180)',
+   'id': 0,
+   'label': 'Life Sciences & Psychology',
+   'size': 81.64687479696907,
+   'x': 0.56042542372881343,
+   'y': 1.9858322033898304},
+  {'classsize': 40996,
+   'color': 'rgb(178,223,138)',
+   'id': 1,
+   'label': 'Physics, Maths, Compsci',
+   'size': 69.99976689557371,
+   'x': 1.1280437499999996,
+   'y': 1.0456000000000001},
+  {'classsize': 5946,
+   'color': 'rgb(51,160,44)',
+   'id': 2,
+   'label': 'Medicine',
+   'size': 32.336272941630405,
+   'x': 0.71263125000000005,
+   'y': 2.6890312500000002},
+  {'classsize': 11619,
+   'color': 'rgb(251,154,153)',
+   'id': 3,
+   'label': 'Business & Finance',
+   'size': 42.27343130905667,
+   'x': 2.0714999999999999,
+   'y': 1.4964818181818182},
+  {'classsize': 4424,
+   'color': 'rgb(227,26,28)',
+   'id': 4,
+   'label': 'Engineering',
+   'size': 28.729366346430094,
+   'x': 1.8633818181818185,
+   'y': 0.24935454545454541},
+  {'classsize': 1052,
+   'color': 'rgb(253,191,111)',
+   'id': 5,
+   'label': 'Geology',
+   'size': 16.17358502327084,
+   'x': 0.53580000000000005,
+   'y': 0.88319999999999999},
+  {'classsize': 818,
+   'color': 'rgb(255,127,0)',
+   'id': 6,
+   'label': 'Law',
+   'size': 14.625183420926676,
+   'x': 0.1638,
+   'y': 0.64019999999999999}]);
+
+  // create an array with edges
+  var edges = new vis.DataSet([{'color': 'rgb(26,150,65)',
+   'from': 0,
+   'label': '3.446',
+   'source': 0,
+   'target': 0,
+   'to': 0,
+   'weight': 3.446,
+   'width': 4},
+  {'color': 'rgb(253,174,97)',
+   'from': 0,
+   'label': '0.715',
+   'source': 0,
+   'target': 1,
+   'to': 1,
+   'weight': 0.715,
+   'width': 4},
+  {'color': 'rgb(166,217,106)',
+   'from': 0,
+   'label': '1.105',
+   'source': 0,
+   'target': 2,
+   'to': 2,
+   'weight': 1.105,
+   'width': 4},
+  {'color': 'rgb(166,217,106)',
+   'from': 0,
+   'label': '1.155',
+   'source': 0,
+   'target': 3,
+   'to': 3,
+   'weight': 1.155,
+   'width': 4},
+  {'color': 'rgb(253,174,97)',
+   'from': 0,
+   'label': '0.716',
+   'source': 0,
+   'target': 5,
+   'to': 5,
+   'weight': 0.716,
+   'width': 4},
+  {'color': 'rgb(166,217,106)',
+   'from': 0,
+   'label': '1.163',
+   'source': 0,
+   'target': 6,
+   'to': 6,
+   'weight': 1.163,
+   'width': 4},
+  {'color': 'rgb(215,25,28)',
+   'from': 1,
+   'label': '0.221',
+   'source': 1,
+   'target': 1,
+   'to': 1,
+   'weight': 0.221,
+   'width': 4},
+  {'color': 'rgb(253,174,97)',
+   'from': 1,
+   'label': '0.513',
+   'source': 1,
+   'target': 3,
+   'to': 3,
+   'weight': 0.513,
+   'width': 4},
+  {'color': 'rgb(215,25,28)',
+   'from': 1,
+   'label': '0.395',
+   'source': 1,
+   'target': 4,
+   'to': 4,
+   'weight': 0.395,
+   'width': 4},
+  {'color': 'rgb(253,174,97)',
+   'from': 1,
+   'label': '0.502',
+   'source': 1,
+   'target': 5,
+   'to': 5,
+   'weight': 0.502,
+   'width': 4},
+  {'color': 'rgb(253,174,97)',
+   'from': 1,
+   'label': '0.632',
+   'source': 1,
+   'target': 6,
+   'to': 6,
+   'weight': 0.632,
+   'width': 4},
+  {'color': 'rgb(166,217,106)',
+   'from': 2,
+   'label': '1.109',
+   'source': 2,
+   'target': 2,
+   'to': 2,
+   'weight': 1.109,
+   'width': 4},
+  {'color': 'rgb(253,174,97)',
+   'from': 3,
+   'label': '0.721',
+   'source': 3,
+   'target': 3,
+   'to': 3,
+   'weight': 0.721,
+   'width': 4},
+  {'color':'rgb(215,25,28)',
+   'from': 4,
+   'label': '0.424',
+   'source': 4,
+   'target': 4,
+   'to': 4,
+   'weight': 0.424,
+   'width': 4},
+  {'color': 'rgb(253,174,97)',
+   'from': 5,
+   'label': '0.701',
+   'source': 5,
+   'target': 5,
+   'to': 5,
+   'weight': 0.701,
+   'width': 4},
+  {'color': 'rgb(166,217,106)',
+   'from': 6,
+   'label': '1.116',
+   'source': 6,
+   'target': 6,
+   'to': 6,
+   'weight': 1.116,
+   'width': 4}]);
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+  nodes: {
+          shape: 'dot', //change to 'circle' if want to put label inside shape - although messes with size 
+          //scaling: {
+            //customScalingFunction: function (min,max,size) {
+              //return size;
+         //fixed: true,
+		 physics: false
+		 },
+           	  
+  edges: {
+		  selfReferenceSize: 30, //radius of self-loops
+		  smooth: {
+				type: 'dynamic'}//nicer curves
+		  }
+		  
+		  };
+  var network = new vis.Network(container, data, options);
+  
+
+
+  
+
+</script>
+
+
+</body>
+</html>
