@@ -15,6 +15,9 @@
 	<!-- Add custom CSS here -->
 	<link href="css/stylish-portfolio.css" rel="stylesheet">
 	<link href="css/font-awesome.min.css" rel="stylesheet">
+	
+	<link href="d3.min.js" rel ="d3.min.js">
+	<link href="d3.sankey.js" rel ="d3.sankey.js">
 </head>
 
 <body>
@@ -58,6 +61,10 @@
 			</li>
 			
 			<li>
+				<a href="#Habitus">Habitus</a>
+			</li>
+			
+			<li>
 				<a href="#Summary">Summary</a>
 			</li>
 			
@@ -81,7 +88,7 @@
 
 	<!-- Intro -->
 	
-	<div id="Issue" class="intro">
+	<div id="Issue" class="call-to-action">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-9 col-md-offset-2">
@@ -90,7 +97,7 @@
 					<p><li> Often explained in terms of a “Leaky Pipeline”</li></p>
 					<p><li> The issue is complex.</li></p>
 					<center>
-						<IMG src="stereotypes.jpg" alt="stereotypes" style="width:600px;height:400px;">
+						<IMG src="stereotypes.jpg" alt="stereotypes" style="width:800px;">
 					</center>
 					<center><h1> In order to understand and address the problem, we need a research framework that considers the complex nature of society.</h1></center>
 
@@ -104,8 +111,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-9 col-md-offset-2">
+				<h1> Pierre Bourdieu</h1>
 					<center>
-						<IMG src="Bourdieu.jpg" alt="Bourdieu" style="width:666px;height:434px;">
+						<IMG src="Bourdieu.jpg" alt="Bourdieu" style="width:1000px">
 					</center>
 					
 					<p><i>Pierre Bourdieu - photograph by Leonardo Antoniadis </i></p>
@@ -140,7 +148,7 @@
 		</div>
 	</div>
 	
-	<div id="Field" class="call-to-action">
+	<div id="Field" class="intro">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-9 col-md-offset-2">
@@ -165,7 +173,7 @@
     <!-- /Intro -->
 
     <!-- Call to Action -->
-    <div class="intro" id="Networks">
+    <div class="call-to-action" id="Networks">
         <div class="container">
             <div class="row">
                 <div class="col-md-9 col-md-offset-2">
@@ -190,7 +198,7 @@
     <!-- /Call to Action -->
 	
 	<!--location-->
-	 <div class="call-to-action" id="TransverseMovementsHS">
+	 <div class="intro" id="TransverseMovementsHS">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-9 col-md-offset-2">
@@ -215,7 +223,7 @@
 		</div>
 	</div>
 	
-	 <div class="intro" id="TransverseMovementsUni">
+	 <div class="call-to-action" id="TransverseMovementsUni">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-9 col-md-offset-2">
@@ -258,15 +266,13 @@
 						<canvas width="1000" height="600" ></canvas>
 						<svg width="1000" height="600" ></svg>
 
-						<script src="d3.v3.min.js" </script>
+						<script src="https://d3js.org/d3.v3.min.js" charset="utf-8" type="text/javascript"></script>
+						<script src="d3.min.js" charset="utf-8" type="text/javascript"></script>
 						<script src="d3.sankey.js" charset="utf-8" type="text/javascript"></script>
 						
-						<br>
-						<br>
-						<br>
-						<br>
+						
 						<script type="text/javascript">
-
+						
 						var canvas = d3.select("canvas")
 						    .style("position", "absolute");
 
