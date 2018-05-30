@@ -121,7 +121,7 @@ body {
 /* Intro */
 
 .intro {
-  padding: 50px 0;
+  padding: 0;
 }
 
 /* speakers */
@@ -150,6 +150,17 @@ i.service-icon {
 
 /* Callout */
 
+HighSchool_Tertiary{
+	background-image: url(HighSchool_Tertiary.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	background-position: center center;
+	position: relative;
+}
+	
+}
 .callout {
   color: #ffffff;
   display: table;
