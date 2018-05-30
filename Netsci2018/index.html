@@ -255,10 +255,10 @@
 					<p><li>Below shows the movements based on volume of educational capital in physics</p></li>
 
 					<div>	
-						<canvas width="666" height="420" ></canvas>
-						<svg width="666" height="420" ></svg>
+						<canvas width="1000" height="600" ></canvas>
+						<svg width="1000" height="600" ></svg>
 
-						<script src="https://d3js.org/d3.v3.min.js" charset="utf-8" type="text/javascript"></script>
+						<script src="d3.v3.min.js" </script>
 						<script src="d3.sankey.js" charset="utf-8" type="text/javascript"></script>
 						
 						<br>
@@ -271,8 +271,8 @@
 						    .style("position", "absolute");
 
 						var margin = {top: 1, right: 1, bottom: 6, left: 1},
-						    width = 666 - margin.left - margin.right,
-						    height = 420 - margin.top - margin.bottom;
+						    width = 1000 - margin.left - margin.right,
+						    height = 600 - margin.top - margin.bottom;
 
 						var formatNumber = d3.format(",.0f"),
 						    format = function(d) { return formatNumber(d) + " Students"; },
