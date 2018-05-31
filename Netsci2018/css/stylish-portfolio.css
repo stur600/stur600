@@ -111,7 +111,7 @@ body {
   height: 100%;
   width: 100%;
   position: relative;
-  background: url(../img/bg.jpg) no-repeat center center fixed; 
+  background: url(../all_courses.png) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -150,14 +150,16 @@ i.service-icon {
 
 /* Callout */
 
-HighSchool_Tertiary{
-	background-image: url(HighSchool_Tertiary.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-	width: 100%;
-	height: 100vh;
-	background-position: center center;
-	position: relative;
+.header2 {
+  display: table;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: url(../all_courses.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 	
 }
@@ -244,7 +246,11 @@ i.scroll:hover {
 @media (max-width: 768px) {
 	
   .header {
-	background: url(../img/bg.jpg) no-repeat center center scroll; 
+	background: url(../all_courses.png) no-repeat center center scroll; 
+  }
+  
+  .header2 {
+	background: url(../all_courses.png) no-repeat center center scroll; 
   }
 
   .callout {
@@ -268,47 +274,4 @@ i.scroll:hover {
     margin:auto;
 	
 }
-.jackson{
-	background-size:170px;
-	background-image:url("../img/jackson.jpg");
-	background-position: 0px 0px;
-}
-.centola{
-	background-size:180px;
-	background-image:url("../img/centola.jpg");
-	background-position: -15px 5px;
-}
-.sin{
-	background-size:280px;
-	background-image:url("../img/sin.jpg");
-	background-position: -60px -40px;
-}
-.olsen{
-	background-size:280px;
-	background-image:url("../img/olsen.jpg");
-	background-position: -60px -30px;
-}
-.speaker3{
-	background-size:150px;
-	background-image:url("../img/speaker3.jpg");
-	background-position: 0px 0px;
-}
-.organizers div p a{
- 	color:white;
-	text-decoration:underline;
-}
-.girard{
-	background-size:150px;
-	background-image:url("../img/girard.jpg");
-	background-position: 10px 0px;
-}
-.oneale{
-	background-size:180px;
-	background-image:url("../img/oneale.jpg");
-	background-position: -10px 0px;
-}
-.wilson{
-	background-size:170px;
-	background-image:url("../img/wilson2.jpg");
-	background-position: -5px -0px;
-}
+
