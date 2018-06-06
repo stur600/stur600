@@ -161,7 +161,54 @@ i.service-icon {
   -o-background-size: cover;
   background-size: cover;
 }
-	
+.header3 {
+  display: table;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: url(../BourdieuMCA.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 70% 80%;
+}
+
+.header4 {
+  display: table;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: url(../myMCA.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 70% 80%;
+}
+
+.header5 {
+  display: table;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: url(../HighSchool_Tertiary_Heatmap.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 60% 90%;
+}
+
+.header6 {
+  display: table;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: url(../HighSchool_Tertiary.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 45% 90%;
+}
+
 }
 .callout {
   color: #ffffff;
