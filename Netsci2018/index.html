@@ -115,20 +115,68 @@
 	<!-- /Full Page Image Header Area -->
 
 	<!-- Intro -->
-	
-	<div id="Issue" class="intro">
+	<div id="Background" class="call-to-action">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-9 col-md-offset-0">
-					<h1> The Issue at Hand</h1>
-					<p><li> Historically, women and minority groups have been underrepresented in scientific disciplines.</li></p>
-					<p><li> With the increasing abundance of data, we can begin to unpack where this happens.</li></p>
+					<h1>Background</h1>
+					<p>The current work discusses some of the methodology of my PhD work, which seeks to combine sociological theory and network analysis to 
+					understand gendered and classed patterns in science education in New Zealand. This work was originally presented at the satelite session "People, Places, Things" at 
+					the Network Science conference (Netsci2018) in Paris on the 12th of June, 2018. The aim of this write up is to explain, in basic terms, the 
+					benefits of using networks to represent large, complex data regarding students' pathways through science, but also how the sociological theory 
+					outlined by Pierre Bourdieu can serve as an excellent guide for the research process. In particular, Bourdieu's theory provides a great framework for 
+					developing initial research questions, whilst it also provides a means of placing research findings in a broad societal context. This wall of text will 
+					seek to:<p>
+					<p><li>give a quick introduction to the motivations behind this research, specifically the issue of gender equity in science education.</li></p>
+					<p><li>offer an quick introduction to how networks can be used to understand students' science course selection, and represent trends in course selction by gender.</li></p>
+					<p><li>provide a simple overview of the Pierre Bourdieu's sociological theory, using examples of how it applied to science education.</li></p>
+					<p><li>demonstrate how networks can be used to represent Bourdieu's theory using preliminary results from research using New Zealand's Integrated Data Infrastructure (IDI).</li></p>
+					
 					<center>
 						<IMG src="stereotypes.jpg" alt="stereotypes" style="width: 100%;">
 					</center>
 					<br>
 					<br>
 					<br>
+					<br>
+					<br>
+					<br>
+
+				</div>
+			</div>
+		</div>
+	</div>	
+	
+	<div id="Issue" class="intro">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-9 col-md-offset-0">
+					<h1> The Issue at Hand</h1>
+					<p>Historically, women and minority groups have been underrepresented in scientific disciplines. Modern day trends tend to show this pattern of
+					science engagement operates at a more fine grained level, with subjects such as physics, mathematics, computer science, and engineering tending 
+					to be male dominated, while the life science subjects (biology, medicine, health) tend to be more equal in terms of gender representation. 
+					This trend is common at all stages of post-compulsory education in New Zealand, and also internationally in Europe, the United States,  </p>
+					<br>
+
+					<center>
+						<IMG src="stereotypes.jpg" alt="stereotypes" style="width: 100%;">
+					</center>
+					<br>
+					<p>With the increasing abundance of data, we can begin to unpack where gender and class disparities occur, and maybe even why they occur. In my 
+					case, I will discuss how I am using the Integrated Data Infrasture (IDI) to try and provide an in depth understanding of pathways through science 
+					education, and how they may vary at the intersection of gender and social class. The IDI is a collection a datasets hosted by Statistics New 
+					Zealand that contains information regarding student's subject selection and performance at all stages of education, tied at an individual level 
+					to the census (and also lots of other dataset that I have not explored as of yet). We therefore have an incredibily rich dataset 
+					that we can analyse. However, with this richness, we also have an increased level of complexity that can make it difficult to generate and 
+					answer research questions. Luckily, network analysis offers a method of analysis that tackles complex data and offers a way of revealing trends.
+					</p>
+					<br>
+					<p>A network is basically a collection of nodes (dots) and edges (lines that connect dots). Nodes can represent anything, such as agents (people), 
+					institutions (e.g., universities), and objects. The edges represent instances where two nodes share a relationship of some kind.
+					We can assign attributes to the nodes and edges in a network. For example if a node represents a person, it may have information regarding gender,
+					ethnicity, or other demographic information. Edge attributes represent the characteristics of the relationship shared between nodes. An important 
+					edge attribute is the weight of the edge. This is a value that is used to represent the strength of a relationship between two nodes, and may be derived in 
+					a multitude of ways (such as frequency, distance, correlations, amongst others).
 					<br>
 					<br>
 					<br>
@@ -149,17 +197,35 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-9 col-md-offset-0">
-					<p><h2>Courses Taken by Physics Students at the University of Auckland</h2></p>
-					<p><li>Every student who took at least one physics course at the University of Auckland</li></p>
-					<p><li>Nodes represent courses, links represent instances where a student took a pair of courses</li></p>
+					<p>The image presented above provides an example of a network that uses student data. In this network, nodes represent courses offered by the University of 
+					Auckland. Edges represent instances where a student took a pair of courses within their first year at the university. Instead of having a single edge 
+					for each student who took a pair of courses, we can aggregate these edges and use that frequency as a weight for a single edge. In our case, we have 
+					used a different metric called Revealed Comparitive Preference (RCP) to highlight the pairs of courses that are most interesting. This 
+					type of weight brings a pair of courses closer together if there more students taking that pair of courses relative to the overall population of the network, and the number of 
+				   in each course. </p>
+					
+					<br>
+					<p>Once this network has been formed, we can run community detection to reveal the clusters of courses that tended to be taken together. In our case, 
+					we used Louvain community detection, which is an algorithm that groups nodes together by maximising the modularity score of the network. 
+					This is a fancy way of saying that nodes that have lots of connections are grouped together, while nodes in different communities have sparcer connections
+					Each community seems to represent a different degree structurs at the University of Auckland, which is not surprising. For example, we would expect Bachelor of Arts students
+					to take similar courses to one another, and different from Bachelor of Science students. Red seems to represent the arts, Yellow the science, purple the 
+					engineering, and orange the music. </p>
+					
+					<p>Now we can look at subsets of the main network in more detail. In the following case, I have just taken the students who studied at least one 
+					physics course at the University of Auckland.</p>
 					<center>
 					<IMG src="PhysNetwork1.png" alt="physicsStudentNetwork" style="width: 100%;">
 					</center>
 					<br>
-					<p><li>We can compare male and female students by aggregating edges within and between communities...</li></p>
+					<p><li>We can compare male and female students by aggregating edges within and between communities based on the gender of the student. 
+					The following network presents a cleaner version of the network by summarising each community into a single node that is labeled according to the 
+					courses that are present within the community. Edges in the network are show an odds ratio: the likelihood of a female student taking a pair of courses 
+					within a community (self-loops) or between two communities. The size of the nodes now represent aggregated course populations for each community. </li></p>
 					
 
 					<br>
+					
 					<br>
 					<br>
 													
@@ -167,8 +233,8 @@
 					<IMG src="PhysNetworkCom.png" alt="physicsStudentNetworkCommunities" style="width: 100%;">
 					</center>
 								
-					<p><li>An odds ratio can be calculated by splitting by gender, and comparing the number of edges within a community (represented by self-loops) and between a community.</li></p>
-					<p><li>Green indicates that female students were more likely to take a pair of courses within/between communities.</li></p>
+					<p>As we can see, female students were around 3.4 times more likely to take a pair of courses within the life sciences and psychology community. 
+					Male students were more likely to take courses within the physics, maths, computer science community and between that community and engineering.</li></p>
 
 					
 				</div>
@@ -180,14 +246,26 @@
 			<div class="row">
 				<div class="col-md-9 col-md-offset-0">
 					<h1> The Leaky Pipeline</h1>
-					<p><li> Student attrition often explained in terms of a “Leaky Pipeline”</li></p>
-					<p><li> With the increasing availability of data we can begin to understand the complexity of the issue.</li></p>
+					<p>Now the trends identified in our quick and dirty network analysis, although interesting, are very common for post-compulsory education 
+					in New Zealand and across the world. Historically, these patterns have been explained in terms of the "Leaky Pipeline". This model basically 
+					presents the idea that science education is like a big long pipe that stretches from primary school all the way through high school, and 
+					finally ends with graduation from university and entering into the workforce. However, with each transition from one educational stage
+					to the next, students "leak" out of the pipeline and disappear forever. The gender disparities outlined in our networks would therefore 
+					be explained in terms of female students being more likely to leak from physics, maths, engineering etc., and male students being more likely 
+					to leak from the life sciences. Now as soon as you start labelling students as "leaks", this analogy needs to be fixed. Students can take a wide range 
+					of pathways through high school and university study. Instead of one big pipe, we need to start thinking in terms of a complex collection of pipes, each 
+					one pretty much unique to individual students. Students don't leak, they make study decisions based on the realities in which they are based. Simply 
+					labelling students as leaks or dropouts stigmatizes the individual and neglects the socio-cultural context in which students are placed. With the 
+					increasing abundance of student data, and with the help of techniques such as network analysis, we have no excuse for ignoring context.
+					</p>
 					
 					<br><br>
 					<br>
 					<br>
 					
-					<center><h1> In order to understand and address the problem, we need a research framework that considers the complex nature of society.</h1></center>
+					<center><h1> If we want to understand and address gender and classed disparities in science 
+					education, we need to move beyond the leaky pipeline model of student attrition and onto research frameworks 
+					that consider the complex nature of society.</h1></center>
 					<br>
 					<br>
 					<br>
@@ -208,10 +286,21 @@
 						<IMG src="Bourdieu.jpg" alt="Bourdieu" style="width: 100%;">
 					</center>
 					
-					<p><i>Pierre Bourdieu - photograph by Leonardo Antoniadis </i></p>
-					<p><li> French Sociologist active around 1960 - 1990</li></p>
-					<p><li> Sociological theory that takes into account the impact of context on students’ study choices.</li></p>
-					<p><li> Emphasizes the importance of mixed method approach that combines theory with analysis.</li></p>
+					<p><i>Pierre Bourdieu realising he left the oven on at home - photograph by Leonardo Antoniadis </i></p>
+					<p>The sociological theory of Pierre Bourdieu offers one such avenue for framing the journeys that students 
+					take through higher education. Bourdieu was a french sociologist who was active from around 1960 to 1990, with his work (in partiular
+					his seminal book "Distinction") leaving a lasting influence on educational research. One major advantage offered by Bourdieu's framework is 
+					the manner by which it encourages a mixed method approach to research. In fact, for Bourdieu, a true social science is one that combines the objective, 
+					and quantitative, with the subjective and qualitative. His original work included ethnographic research, photograph case studies, interviews, 
+					and large scale surveys. With so many different research paradigms, it is difficult to understand how they can fit together to provide a 
+					cohesive narritive about how society operates. Bourdieu's theoretical framework provides a means to tackle this issue. His theory not only allows
+					us to interpret both quantitative and qualitive results, but it also provides a method of understanding how the objective and subjective are 
+					linked (he dubbed this mode of inquiry Genetic Structuralism).</p>
+					
+					<p>In the simplest terms, Bourdieu was interested in the way that power is distributed in society, and how this relates to an individual's
+					practices (behaviours and attitudes) within society. The theoretical framework that he conceptualised is vast, and since this aim of this piece is to 
+					offer a quick introduction to his work, I will be focussing on a simplified theoretical model that Bourdieu outlined in Distinction. </p>
+					
 				</div>
 			</div>
 		</div>
@@ -234,7 +323,8 @@
 						</center>
 						<br>
 					<br>
-					<br>
+					<p>Bourdieu saw an individual's practices (behaviours and attitudes) in society as being generated by the interaction between capital and habitus.
+					The following sections will define and describe these concepts within the context of science education.
 					<br>
 					<br>
 					
@@ -248,8 +338,11 @@
 			<div class="row">
 				<div class="col-md-9 col-md-offset-0">
 					<p><h1>Capital</h1></p>
-					<p><li>The resources one uses to gain advantage in society</li></p>
-					<p><li>Inequity is driven by the fact that capital is not distributed evenly across society</li></p>
+					<p>Capital is a resource that one can use to gain advantage in society. For Bourdieu, it can take one of four forms: economic, cultural, social 
+					or symbolic. For this piece, I will focus on economic and culutal capital, as it is these two forms of capital that are the most relevant in the 
+					research I will discuss late. For a fuller explanation of capital, The Forms of Capital by Bourdieu is the best place to start.</li></p>
+					<br>
+					
 
 					
 					<br>
@@ -269,13 +362,27 @@
 					<center>
 						<IMG src="CulturalCapital.png" alt="CulturalCapital" style="width: 100%;">
 					</center>
-					<p>Non-financial assets.</p>
-					<p><li>The objects we engage with (textbooks, computers, media)</li></p>
+					<p>Bourdieu is probably most famous for his concept of cultural capital. It refers to an individual's non-financial assets. This can refers
+					to the objects we engage with, such as the textbooks, computers, and media (tv shows). It is easy to understand how this form of 
+					objectified cultural capital can be advantageous for students. If you grow up reading science textbooks or magazines, you will likely do
+					better with science at school. But 
 					<p><li>The way we embody culture (language, posture, thought processes - habitus)</li></p>
 					<p><li>Certificates from institutions (course grades, diplomas, degrees)</li></p>
 
-
-					
+					<h2>How Capital Relates to Equity</h2>
+					<p>The key thing for Bourdieu is that inequity is driven by the fact that capital is not distributed evenly across society. By this I mean that 
+					some individuals can be born with a high level of resources at their disposal, whilst others can be born into poverty. It may be clear how this 
+					relates to economic capital. Being born into wealth is one of the best predictors of educational success. But Bourdieu especially emphasized the 
+					advantages gain by being born into a family that shares the dominant culture in society. These individual's learn from the very begining the 'correct'
+					way of behaving, speaking, and interacting with those in charge. The concept of cultural capital is more tacit than econmic capital, but one example that
+					has a clear and lasting impact is language. Individuals who are born into families who have a good grasp of the dominant language (i.e., the one used by 
+					schools) have a clear advantage when it comes to schooling. They are more likely to enter education with the literacy skills required to function 
+					in the classroom. Kids born into families that either do not speak the dominant language or do not have a lifetime of experience with it will start on the 
+					back foot.
+					<br>
+					Capital is also accumulative. This means that the more capital you have, you are more able to invest it in ways that return more capital. 
+					A good example of this can be seen in education. If your family has lots of money, you can afford to go to university. 
+					With a university degree you are more able to get a high paying job, and therefore get more money.</p>
 				</div>
 			</div>
 		</div>
